@@ -1,15 +1,15 @@
 # PlaguBot Bot Template
 
-1. Update your dependencies [here](./build.gradle#L30). Usually in gradle projects/readmes developers define names of
+1. Update your dependencies [here](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/build.gradle#L27-L30). Usually in gradle projects/readmes developers define names of
 their dependencies
 2. Edit [config](config.json). The main points
 ([full list of parameters with explanation](https://github.com/InsanusMokrassar/PlaguBot/blob/master/template.config.json):
-    * Change [database](./config.json#L3) section
-    * Change [bot token](./config.json#L5))
-    * Change [list of plugins](./config.json#L6-L11):
+    * Change [database](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L2-L4) section
+    * Change [bot token](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L5))
+    * Change [list of plugins](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L6-L11):
         * Field `type` - it is name of the plugin provided by developer/dependency
         * Other fields are parameters of plugin and must be provided directly
-        * Example is available in the [example section](./config.json#L6-L11): here `Hello` is name of plugin and
+        * Example is available in the [example section](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L6-L11): here `Hello` is name of plugin and
         `parameter` is its configuration parameter
 
 ## How to launch
