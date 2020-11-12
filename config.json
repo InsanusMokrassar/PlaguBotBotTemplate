@@ -1,0 +1,12 @@
+{
+  "database": {
+    "url": "jdbc:sqlite:file:test?mode=memory&cache=shared"
+  },
+  "botToken": "1234567890:ABCDEFGHIJKLMNOP_qrstuvwxyz12345678",
+  "plugins": [
+    {
+      "type": "Hello",
+      "parameter": "Example"
+    }
+  ]
+}

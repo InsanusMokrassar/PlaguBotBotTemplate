@@ -1,28 +1,22 @@
-# Telegram Bot Template
+# PlaguBot Bot Template
 
-That is template for telegram bots based on next stack of technologies:
+1. Update your dependencies [here](./build.gradle#L30). Usually in gradle projects/readmes developers define names of
+their dependencies
+2. Edit [config](config.json). The main points
+([full list of parameters with explanation](https://github.com/InsanusMokrassar/PlaguBot/blob/master/template.config.json):
+    * Change [database](./config.json#L3) section
+    * Change [bot token](./config.json#L5))
+    * Change [list of plugins](./config.json#L6-L11):
+        * Field `type` - it is name of the plugin provided by developer/dependency
+        * Other fields are parameters of plugin and must be provided directly
+        * Example is available in the [example section](./config.json#L6-L11): here `Hello` is name of plugin and
+        `parameter` is its configuration parameter
 
-* [Kotlin Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
-* [Kotlin Serialization](https://github.com/Kotlin/kotlinx.serialization)
-* [Telegram Bot API Library](https://github.com/InsanusMokrassar/TelegramBotAPI) (by default everything is included like
-it was described [here](https://github.com/InsanusMokrassar/TelegramBotAPI#ok-where-should-i-start))
+## How to launch
 
-## Default
+There are two main ways to launch it:
 
-Since you have used this repo as a template you can simply run command `./gradlew run --args="BOT_TOKEN"` (of course,
-replace here `BOT_TOKEN` with your telegram bot token like `1234567890:ABCDEFGHIJKLM_OPqrstuvwxyz012345678`). As an
-output you will get your bot information like:
-
-```bash
-ExtendedBot(id=ChatId(chatId=1234567890), username=Username(username=@username_of_your_bot), firstName=Name of bot, lastName=, canJoinGroups=(some boolean), canReadAllGroupMessages=(some boolean), supportsInlineQueries=(some boolean))
-```
-
-## What next?
-
-There are several ways to continue:
-
-* [Tutorials](https://bookstack.inmo.dev/books/telegrambotapi)
-* [Github readme](https://github.com/InsanusMokrassar/TelegramBotAPI)
-
-In other words, this template (and [TelegramBotAPI library](https://github.com/InsanusMokrassar/TelegramBotAPI)) does
-not limit you on choosing of way to continue 😊
+* Run `./gradlew build && ./gradlew run --args="PATH_TO_YOUR_CONFIG"` with replacing of `PATH_TO_YOUR_CONFIG`
+* Run `./gradlew build` and get [zip of bot](build/distributions/bot.zip) and unarchive it somewhere you need. In this
+archive there is an executable files `bot.bat` (for windows) and `bot` (for linux) by the path inside of archive
+`/bot/bin`. After unarchiving you can just launch executable file with one argument: path to the config

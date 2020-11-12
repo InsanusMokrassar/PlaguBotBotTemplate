@@ -12,22 +12,29 @@ buildscript {
 plugins {
     id 'org.jetbrains.kotlin.jvm' version "$kotlin_version"
     id "org.jetbrains.kotlin.plugin.serialization" version "$kotlin_version"
+    id "org.jetbrains.kotlin.kapt" version "$kotlin_version"
     id 'application'
 }
 
 repositories {
     jcenter()
     mavenCentral()
+    mavenLocal()
+    maven { url 'https://jitpack.io' }
+    maven { url "https://dl.bintray.com/insanusmokrassar/PlaguBot/" }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialisation_runtime_version"
-
-    implementation "dev.inmo:tgbotapi:$tgbotapi_version"
+    api "dev.inmo:plagubot.bot:$plagubot_version"
 }
 
 application {
-    mainClassName = 'telegram_bot.AppKt'
+    mainClassName = 'dev.inmo.plagubot.AppKt'
+}
+
+kapt {
+    arguments {
+        arg("com.github.matfax.klassindex.IndexSubclasses", "dev.inmo.plagubot.Plugin")
+    }
 }
