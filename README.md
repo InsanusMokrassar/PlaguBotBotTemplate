@@ -5,7 +5,7 @@ their dependencies
 2. Edit [config](config.json). The main points
 ([full list of parameters with explanation](https://github.com/InsanusMokrassar/PlaguBot/blob/master/template.config.json):
     * Change [database](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L2-L4) section
-    * Change [bot token](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L5))
+    * Change [bot token](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L5)
     * Change [list of plugins](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L6-L11):
         * Field `type` - it is name of the plugin provided by developer/dependency
         * Other fields are parameters of plugin and must be provided directly
