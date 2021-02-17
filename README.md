@@ -11,6 +11,14 @@ their dependencies
         * Other fields are parameters of plugin and must be provided directly
         * Example is available in the [example section](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L6-L11): here `Hello` is name of plugin and
         `parameter` is its configuration parameter
+    * Change [params](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L12-L17):
+         * Any key here will be available in plugins as name of param
+         * Any value must contains:
+            * `type` to detect which one object to instantiate
+            * Other type parameters
+         * You may look into example related to database in
+           [config](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#13): `defaultDatabase`
+           is easily available in plugins as `params.database` extension
 
 ## How to launch
 

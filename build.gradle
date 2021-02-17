@@ -38,5 +38,6 @@ application {
 kapt {
     arguments {
         arg("com.github.matfax.klassindex.IndexSubclasses", "dev.inmo.plagubot.Plugin")
+        arg("com.github.matfax.klassindex.IndexAnnotated", "dev.inmo.sdi.SDIIncluded")
     }
 }
