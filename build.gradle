@@ -1,43 +1,30 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath libs.kotlin.gradle.plugin
+        classpath libs.kotlin.serialization.plugin
     }
 }
 
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version "$kotlin_version"
-    id "org.jetbrains.kotlin.plugin.serialization" version "$kotlin_version"
-    id "org.jetbrains.kotlin.kapt" version "$kotlin_version"
+    alias libs.plugins.kotlin.jvm
+    alias libs.plugins.kotlin.serialization
     id 'application'
 }
 
 repositories {
-    jcenter()
     mavenCentral()
     mavenLocal()
-    maven { url 'https://jitpack.io' }
-    maven { url "https://dl.bintray.com/insanusmokrassar/PlaguBot/" }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "dev.inmo:plagubot.bot:$plagubot_version"
-
-    kapt "com.github.matfax.klassindex:processor:$klassindex_version"
+    implementation libs.kotlin
+    implementation libs.plagubot
 }
 
 application {
     mainClassName = 'dev.inmo.plagubot.AppKt'
-}
-
-kapt {
-    arguments {
-        arg("com.github.matfax.klassindex.IndexSubclasses", "dev.inmo.plagubot.Plugin")
-        arg("com.github.matfax.klassindex.IndexAnnotated", "dev.inmo.sdi.SDIIncluded")
-    }
 }
