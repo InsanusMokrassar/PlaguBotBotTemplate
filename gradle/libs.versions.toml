@@ -1,7 +1,7 @@
 [versions]
 
 kotlin = "1.6.21"
-plagubot = "1.1.1"
+plagubot = "1.1.2"
 
 [libraries]
 
