@@ -1,9 +1,9 @@
 # PlaguBot Bot Template
 
-1. Update your dependencies [here](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/build.gradle#L27-L30). Usually in gradle projects/readmes developers define names of
+1. Update your dependencies in [`gradle/libs.versions.toml`](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/gradle/libs.versions.toml), and don't forget to mention them in `depdendencies { ... }` block of [`build.gradle`](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/build.gradle#L24-L27) if you add new ones. Usually in gradle projects/readmes developers define names of
 their dependencies
 2. Edit [config](config.json). The main points
-([full list of parameters with explanation](https://github.com/InsanusMokrassar/PlaguBot/blob/master/template.config.json):
+([full list of parameters with explanation](https://github.com/InsanusMokrassar/PlaguBot/blob/master/template.config.json)):
     * Change [database](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L2-L4) section
     * Change [bot token](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L5)
     * Change [list of plugins](https://github.com/InsanusMokrassar/PlaguBotBotTemplate/blob/master/config.json#L6-L11):
