@@ -1,7 +1,7 @@
 [versions]
 
-kotlin = "1.8.22"
-plagubot = "7.2.3"
+kotlin = "2.0.10"
+plagubot = "9.0.0"
 
 [libraries]
 
