@@ -1,6 +1,6 @@
 [versions]
 
-kotlin = "2.0.20"
+kotlin = "2.1.10"
 plagubot = "10.0.0"
 
 [libraries]
